@@ -1,0 +1,15 @@
+.Summary {
+  background-color: var(--white);
+  padding: var(--space-5);
+  display: grid;
+  gap: var(--space-3);
+  font-size: var(--fs-s);
+  border-radius: var(--radius);
+  color: var(--dark-500);
+}
+
+.Item {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}

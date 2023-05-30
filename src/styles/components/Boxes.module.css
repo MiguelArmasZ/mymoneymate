@@ -1,0 +1,44 @@
+.ConfirmAccount {
+  padding: var(--space-8) var(--space-6);
+  border-radius: var(--radius);
+  display: grid;
+  gap: var(--space-7);
+  border: 1px solid var(--gray-500);
+}
+
+.Variant1 {
+  display: grid;
+  grid-template-rows: auto max-content;
+}
+
+.Keypad {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.Variant2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.Variant3 {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.Variant4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Variant5 {
+  display: grid;
+  grid-template-rows: auto max-content;
+  overflow: scroll;
+  max-height: 500px;
+}

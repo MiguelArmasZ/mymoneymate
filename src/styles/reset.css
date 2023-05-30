@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Medium.ttf');
+}
+
+:root {
+  --tipo-primary: 'Poppins', Helvetica, Arial, sans-serif;
+
+  --primary: #b3005e;
+  --primary-hard: #4e052c;
+  --secondary: #362fd9;
+
+  --error: #cc3636;
+  --error-light: #fbeaea;
+  --error-hard: #2f0202;
+
+  --success: #367e18;
+  --success-light: #d5ffc4;
+  --success-hard: #0e3001;
+
+  --warning: #dda310;
+  --warning-light: #dec688;
+  --warning-hard: #7c5501;
+
+  --black: #000;
+  --dark-100: #111;
+  --dark-200: #222;
+  --dark-300: #333;
+  --dark-400: #444;
+  --dark-500: #555;
+  --gray-100: #666;
+  --gray-200: #777;
+  --gray-300: #888;
+  --gray-400: #999;
+  --gray-500: #c1c1c1;
+  --gray-600: #ccc;
+  --light: #f4f1f1;
+  --white: #fff;
+
+  --fs-xs: 0.75rem;
+  --fs-s: 0.9rem;
+  --fs-m: 1.2rem;
+  --fs-l: 1.8rem;
+  --fs-xl: 2.2rem;
+  --fs-xxl: 3rem;
+
+  --space-1: 0.2rem;
+  --space-2: 0.3rem;
+  --space-3: 0.5rem;
+  --space-4: 0.8rem;
+  --space-5: 1rem;
+  --space-6: 1.2rem;
+  --space-7: 1.5rem;
+  --space-8: 2rem;
+  --space-9: 2.5rem;
+  --space-10: 4rem;
+  --space-11: 4.5rem;
+  --space-12: 5rem;
+
+  --radius: 4px;
+  --radius-m: 8px;
+  --radius-l: 15px;
+  --radius-full: 50%;
+
+  --menu-height: 70px;
+}
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: var(--tipo-primary);
+}
+
+*::first-letter {
+  text-transform: uppercase;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--primary);
+  color: var(--white);
+}
+::selection {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-primary);
+  color: var(--dark);
+
+  /* opcional */
+  line-height: 1.4em;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+
+  background-image: linear-gradient(
+    to right top,
+    #ffeeee,
+    #ffeae0,
+    #ffe8cf,
+    #f6ebc0,
+    #ddefbb
+  );
+}

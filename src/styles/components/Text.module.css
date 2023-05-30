@@ -1,0 +1,5 @@
+.TextConfirmAccount {
+  color: var(--gray-200);
+  font-size: var(--fs-s);
+  text-align: center;
+}

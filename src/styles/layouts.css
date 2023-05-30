@@ -1,0 +1,16 @@
+.Layout {
+  display: grid;
+  padding: var(--space-5);
+  min-height: 100vh;
+}
+
+.AuthLayout {
+  place-content: center;
+  gap: var(--space-5);
+}
+
+.BalanceLayout {
+  min-height: calc(100vh - var(--menu-height));
+  grid-template-rows: max-content auto;
+  gap: var(--space-5);
+}

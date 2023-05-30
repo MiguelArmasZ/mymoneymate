@@ -1,0 +1,22 @@
+.Wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.Letter {
+  border-radius: var(--radius-full);
+  height: 4rem;
+  width: 4rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.Email::first-letter {
+  text-transform: lowercase;
+}

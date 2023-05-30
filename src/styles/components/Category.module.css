@@ -1,0 +1,56 @@
+.List {
+  background-color: var(--white);
+  border-radius: var(--radius-m);
+  overflow-y: scroll;
+  max-height: 65vh;
+  height: fit-content;
+}
+
+.Item {
+  padding: var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Item:first-of-type {
+  border-radius: var(--radius-m) var(--radius-m) 0 0;
+}
+
+.Item:last-of-type {
+  border-radius: 0 0 var(--radius-m) var(--radius-m);
+}
+
+.Item:nth-child(odd) {
+  background-color: var(--light);
+}
+
+.Keypad {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.Item:hover .Keypad {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Button {
+  padding: var(--space-1);
+}
+
+.Modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

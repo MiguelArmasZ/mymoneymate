@@ -1,0 +1,12 @@
+.FormNav {
+  border: 1px dashed var(--gray-100);
+  padding: var(--space-5);
+  border-radius: var(--radius);
+  display: grid;
+  gap: var(--space-3);
+  font-size: var(--fs-s);
+}
+
+.Link {
+  color: var(--gray-100);
+}

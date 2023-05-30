@@ -1,0 +1,13 @@
+.Card {
+  padding: var(--space-4);
+  color: var(--white);
+  border-radius: var(--radius-l);
+  position: relative;
+}
+
+.Icon {
+  max-width: 3rem;
+  position: absolute;
+  bottom: 8%;
+  right: 3%;
+}

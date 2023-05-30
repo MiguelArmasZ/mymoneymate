@@ -1,0 +1,15 @@
+.Menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--space-4);
+  height: var(--menu-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Icon {
+  max-width: 30px;
+}

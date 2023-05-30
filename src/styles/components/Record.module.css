@@ -1,0 +1,80 @@
+.List {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+  max-height: 75vh;
+  overflow-y: scroll;
+}
+
+.Record {
+  background-color: var(--white);
+  padding: var(--space-10) var(--space-5) var(--space-10);
+  border-radius: var(--radius);
+  position: relative;
+  gap: var(--space-3);
+  display: grid;
+}
+
+.Concept {
+  position: absolute;
+  padding: var(--space-3) var(--space-5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: var(--radius) var(--radius) 0 0;
+  color: var(--white);
+  font-size: var(--fs-s);
+  text-transform: uppercase;
+}
+
+.Amount {
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.Category,
+.Date {
+  font-size: var(--fs-xs);
+  position: absolute;
+}
+
+.Category {
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: min-content;
+  margin: auto;
+  color: var(--white);
+  padding: var(--space-1) var(--space-5);
+  border-radius: var(--radius-l) 0 0 var(--radius-l);
+  background-image: linear-gradient(100deg, var(--light), var(--gray-600));
+  color: var(--gray-200);
+}
+
+.Date {
+  bottom: 0;
+  left: 0;
+  padding: var(--space-3) var(--space-5);
+  color: var(--gray-300);
+  border-top: 1px dashed var(--gray-500);
+  border-right: 1px dashed var(--gray-500);
+  border-radius: 0 var(--radius-l);
+}
+
+.Keypad {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: var(--space-3) var(--space-5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.Record:hover .Keypad {
+  opacity: 1;
+  visibility: visible;
+}

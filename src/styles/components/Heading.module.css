@@ -1,0 +1,14 @@
+.Heading {
+  font-size: var(--fs-l);
+  font-weight: bold;
+  background-color: var(--black);
+  text-align: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}

@@ -1,0 +1,21 @@
+.Button {
+  background-image: linear-gradient(
+    100deg,
+    var(--primary),
+    var(--primary-hard)
+  );
+  color: var(--white);
+  padding: var(--space-4);
+  border-radius: var(--radius);
+  width: 100%;
+  text-align: center;
+  height: fit-content;
+  align-self: end;
+  transition: background-image 0.3s ease;
+}
+
+.Button:disabled {
+  background-image: linear-gradient(100deg, var(--white), var(--gray-500));
+  color: var(--gray-100);
+  border: 1px solid var(--gray-500);
+}
