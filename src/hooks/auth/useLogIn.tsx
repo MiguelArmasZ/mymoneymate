@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { axiosClient } from '../../config'
 import { useAuthContext } from '../context/useAuthContext'
 import { useMainContext } from '../context/useMainContext'
@@ -18,10 +17,7 @@ export const useLogIn = () => {
         email,
         password
       }
-      const { data } = await axios.post(
-        'https://mymoneymate.onrender.com/user/log-in',
-        dataToSend
-      )
+      const { data } = await axiosClient.post('/user/log-in', dataToSend)
       localStorage.setItem('JWT', data.jwt)
       setUserLogged((data) => {
         return { ...data }
