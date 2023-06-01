@@ -24,7 +24,7 @@ export const App = () => {
   useListenUrl()
 
   useEffect(() => {
-    console.log('v:1.0.0')
+    console.log('v:1.0.1')
   }, [])
 
   return (
