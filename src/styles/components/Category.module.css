@@ -2,7 +2,7 @@
   background-color: var(--white);
   border-radius: var(--radius-m);
   overflow-y: scroll;
-  max-height: 65vh;
+  max-height: 60vh;
   height: fit-content;
 }
 

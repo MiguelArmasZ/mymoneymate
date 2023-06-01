@@ -31,7 +31,7 @@ export const RecordKind = () => {
           onChange={handleChange}
           value={fields.kind}
           options={optionsToRecordKind}
-          cssx={`${cssForm.InputStep} shadow-medium`}
+          cssx={`${cssForm.InputStep} ${cssForm.InputSafari} shadow-medium`}
         />
       </Div>
       <Button initDisabled={fields.kind === ''} type="submit">

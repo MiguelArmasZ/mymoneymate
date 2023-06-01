@@ -10,9 +10,6 @@
 }
 
 .BalanceLayout {
-  /* minheight: calc(100vh - var(--menu-height)); */
-  flex-direction: column;
   grid-template-rows: 8% auto;
   gap: var(--space-5);
-  /* max-height: calc(100vh - var(--menu-height)); */
 }

@@ -16,23 +16,30 @@ export const SelectField = ({
   cssx
 }: Props) => {
   return (
-    <select
-      onChange={onChange}
-      className={cssx}
-      name={id}
-      id={id}
-      value={value}
+    <div
+      style={{
+        padding: '10px',
+        width: '100%'
+      }}
     >
-      <option defaultChecked disabled value="">
-        -- selecciona --
-      </option>
-      {options.map(({ text, value }) => {
-        return (
-          <option key={value} value={value}>
-            {text}
-          </option>
-        )
-      })}
-    </select>
+      <select
+        onChange={onChange}
+        className={cssx}
+        name={id}
+        id={id}
+        value={value}
+      >
+        <option defaultChecked disabled value="">
+          -- selecciona --
+        </option>
+        {options.map(({ text, value }) => {
+          return (
+            <option key={value} value={value}>
+              {text}
+            </option>
+          )
+        })}
+      </select>
+    </div>
   )
 }
