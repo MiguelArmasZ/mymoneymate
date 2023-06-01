@@ -5,8 +5,14 @@
   src: url('../assets/fonts/Poppins-Medium.ttf');
 }
 
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url('../assets/fonts/Poppins-SemiBold.ttf');
+}
+
 :root {
   --tipo-primary: 'Poppins', Helvetica, Arial, sans-serif;
+  --tipo-bold: 'Poppins-bold', Helvetica, Arial, sans-serif;
 
   --primary: #b3005e;
   --primary-hard: #4e052c;

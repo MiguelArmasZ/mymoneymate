@@ -1,6 +1,5 @@
 .Heading {
   font-size: var(--fs-l);
-  font-weight: bold;
   background-color: var(--black);
   text-align: center;
   background-clip: text;
@@ -11,4 +10,5 @@
   align-items: center;
   justify-content: center;
   text-transform: capitalize;
+  font-family: var(--tipo-bold);
 }

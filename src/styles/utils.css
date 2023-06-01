@@ -94,12 +94,12 @@
   margin: auto;
   height: fit-content;
   width: fit-content;
-  font-weight: bold;
+  font-family: var(--tipo-bold);
   color: var(--dark-500);
 }
 
 .label {
-  font-weight: bold;
+  font-family: var(--tipo-bold);
 }
 
 g.recharts-layer.recharts-pie-labels > g > path {

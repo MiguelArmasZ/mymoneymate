@@ -12,6 +12,7 @@
   height: fit-content;
   align-self: end;
   transition: background-image 0.3s ease;
+  font-family: var(--tipo-bold);
 }
 
 .Button:disabled {

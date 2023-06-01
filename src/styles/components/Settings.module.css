@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  font-family: var(--tipo-bold);
 }
 
 .Email::first-letter {
