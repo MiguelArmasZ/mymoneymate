@@ -10,7 +10,7 @@ export const BalanceLayout = () => {
       <main
         className="BalanceLayout Layout"
         style={{
-          minHeight: `calc(100vh - ${
+          maxHeight: `calc(100vh - ${
             document.body.scrollHeight - window.innerHeight
           })px`
         }}
