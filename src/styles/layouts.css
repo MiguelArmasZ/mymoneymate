@@ -11,6 +11,9 @@
 
 .BalanceLayout {
   min-height: calc(100vh - var(--menu-height));
-  grid-template-rows: max-content auto;
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  grid-template-rows: 8% auto;
   gap: var(--space-5);
 }

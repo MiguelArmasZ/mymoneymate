@@ -15,5 +15,6 @@ export const useListenUrl = () => {
     setCurrentStep(0)
     setLoading(true)
     console.log(`${import.meta.env.VITE_BACKEND_URL}/api`)
+    window.scrollTo(0, 0)
   }, [pathname])
 }
