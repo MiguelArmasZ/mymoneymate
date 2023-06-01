@@ -16,4 +16,5 @@
   display: grid;
   grid-template-rows: 8% auto;
   gap: var(--space-5);
+  max-height: calc(100vh - var(--menu-height));
 }

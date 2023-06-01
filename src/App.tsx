@@ -18,9 +18,14 @@ import {
   Records,
   Settings
 } from './pages/private'
+import { useEffect } from 'react'
 
 export const App = () => {
   useListenUrl()
+
+  useEffect(() => {
+    console.log('v:1.0.0')
+  }, [])
 
   return (
     <Routes>
