@@ -12,7 +12,7 @@ export const BalanceLayout = () => {
         style={{
           maxHeight: `calc(100vh - ${
             document.body.scrollHeight - window.innerHeight
-          })px`
+          } - var(--menu-height))px`
         }}
       >
         {loading ? (
