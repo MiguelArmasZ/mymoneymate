@@ -18,7 +18,7 @@ export const useGetProfile = (
       const JWT = localStorage.getItem('JWT')
 
       if (JWT === null) {
-        // navigate('/')
+        navigate('/')
         setLoading(false)
         return
       }
