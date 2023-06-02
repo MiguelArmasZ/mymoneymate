@@ -39,6 +39,6 @@
 .Variant5 {
   display: grid;
   grid-template-rows: auto max-content;
-  overflow: scroll;
+  overflow-y: scroll;
   max-height: 500px;
 }
