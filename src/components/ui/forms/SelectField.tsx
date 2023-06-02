@@ -1,4 +1,5 @@
 import { type Options } from '../../../types'
+import css from '../../../styles/components/Form.module.css'
 
 interface Props {
   id: string
@@ -16,12 +17,7 @@ export const SelectField = ({
   cssx
 }: Props) => {
   return (
-    <div
-      style={{
-        padding: '10px',
-        width: '100%'
-      }}
-    >
+    <div className={`${css.SelectWrap} shadow-medium`}>
       <select
         onChange={onChange}
         className={cssx}

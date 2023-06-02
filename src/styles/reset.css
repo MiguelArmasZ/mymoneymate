@@ -217,3 +217,30 @@ body {
     #ddefbb
   );
 }
+
+@media (min-width: 768px) {
+  body {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+
+/* Barras de desplazamiento en navegadores WebKit (Chrome, Safari) */
+
+/* Barra de desplazamiento vertical */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track (fondo de la barra de desplazamiento) */
+::-webkit-scrollbar-track {
+  background-color: var(--whi);
+}
+
+/* Thumb (agarre de la barra de desplazamiento) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-500);
+  border-radius: 5px;
+}
+
+/* Barras de desplazamiento en navegadores Firefox */

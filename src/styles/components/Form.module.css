@@ -53,10 +53,15 @@
   border-radius: var(--radius);
 }
 
-.InputSafari {
+.SelectWrap {
+  height: 55px;
   width: 100%;
+}
+
+.SafariInput {
   height: 100%;
-  border: none;
-  outline: none;
-  font-size: 16px;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  width: 100%;
+  padding: 0 1rem;
 }
