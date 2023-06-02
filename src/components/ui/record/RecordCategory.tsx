@@ -36,7 +36,7 @@ export const RecordCategory = () => {
           onChange={handleChange}
           value={fields.category}
           options={options}
-          cssx={`${cssForm.InputStep} shadow-medium`}
+          cssx={`${cssForm.SafariInput} shadow-medium`}
         />
       </Div>
       <Div cssx={cssBoxes.Variant3}>

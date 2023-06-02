@@ -31,7 +31,7 @@ export const RecordDate = () => {
       <Div cssx={`${cssBoxes.Variant2} fadeIn-up`}>
         <Text>¿cuándo ha sido?</Text>
         <NormalField
-          cssx={`${cssForm.SelectWrap} shadow-medium`}
+          cssx={`${cssForm.SafariInput} shadow-medium`}
           onChange={handleChange}
           inputType="date"
           id="record-date"

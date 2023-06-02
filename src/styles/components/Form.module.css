@@ -53,7 +53,8 @@
   border-radius: var(--radius);
 }
 
-.SelectWrap {
+.SelectWrap,
+.InputDate {
   height: 55px;
   width: 100%;
 }

@@ -1,4 +1,4 @@
-import { useEffect, type ChangeEvent } from 'react'
+import { type ChangeEvent } from 'react'
 import css from '../../../styles/components/Form.module.css'
 
 interface Props {
@@ -30,13 +30,8 @@ export const NormalField = ({
   onChange,
   focus = false
 }: Props) => {
-  useEffect(() => {
-    // const $input = document.querySelector('#' + id)
-    // $input?.focus()
-  }, [])
-
   return (
-    <div className={css.Field}>
+    <div className={`${inputType === 'date' ? css.InputDate : css.Field}`}>
       <label className={css.Label} htmlFor={id}>
         {label}
       </label>
