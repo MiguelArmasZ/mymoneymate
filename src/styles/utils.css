@@ -65,6 +65,10 @@
   );
 }
 
+.color-yellow {
+  color: var(--warning);
+}
+
 .bg-gray {
   background-image: linear-gradient(100deg, var(--gray-500), var(--gray-100));
 }

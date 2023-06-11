@@ -5,12 +5,12 @@ import cssButton from '../../styles/components/Button.module.css'
 import cssBoxes from '../../styles/components/Boxes.module.css'
 import { PieChart, Pie, Cell } from 'recharts'
 import { useEffect, useState } from 'react'
-import { useBuildHistory } from '../../hooks'
+import { useBuildHistory, useGetRecords } from '../../hooks'
 import { formatToCurrency, formatToDate } from '../../helpers'
 import { type MonthlySummary } from '../../types'
 import cssBalance from '../../styles/components/Blance.module.css'
 
-const COLORS = ['#367e18', '#cc3636', '#fbeaea', '#fbeaea']
+const COLORS = ['#367e18', '#dda310', '#cc3636']
 const RADIAN = Math.PI / 180
 const renderCustomizedLabel = ({
   cx,
@@ -39,6 +39,8 @@ const renderCustomizedLabel = ({
 }
 
 export const Balance = () => {
+  const [currentMonth] = useState(formatToDate(new Date(), 'month'))
+  const [getSaving, setGetSaving] = useState(0)
   const [summaryOfCurrentMonth, setSummaryOfCurrentMonth] =
     useState<MonthlySummary>({
       income: 0,
@@ -46,8 +48,19 @@ export const Balance = () => {
       monthAndYear: '',
       spent: 0
     })
-  const [currentMonth] = useState(formatToDate(new Date(), 'month'))
+
+  const { records } = useGetRecords()
   const { summaryOfMonth } = useBuildHistory()
+  const savingRecords = records.filter((record) => record.category === 'ahorro')
+
+  useEffect(() => {
+    let saving = 0
+    savingRecords.forEach((record) => {
+      saving += Number(record.amount)
+    })
+
+    setGetSaving(saving)
+  }, [savingRecords])
 
   useEffect(() => {
     function getSummaryOfCurrentMonth() {
@@ -64,7 +77,11 @@ export const Balance = () => {
 
   const data = [
     {
-      value: summaryOfCurrentMonth.income - summaryOfCurrentMonth.spent
+      value:
+        summaryOfCurrentMonth.income - summaryOfCurrentMonth.spent - getSaving
+    },
+    {
+      value: getSaving
     },
     { value: summaryOfCurrentMonth.spent }
   ]
@@ -76,7 +93,8 @@ export const Balance = () => {
         document.querySelectorAll('.label')
       if (labels.length > 0) {
         labels[0].style.color = 'var(--success)'
-        labels[1].style.color = 'var(--error)'
+        labels[1].style.color = 'var(--warning)'
+        labels[2].style.color = 'var(--error)'
         observer.disconnect()
       }
     })
@@ -93,16 +111,16 @@ export const Balance = () => {
               summaryOfCurrentMonth.income - summaryOfCurrentMonth.spent
             )}
           </Text>
-          <PieChart innerRadius={5} width={300} height={300}>
+          <PieChart innerRadius={5} width={250} height={250}>
             <Pie
               data={data}
-              cx={145}
-              cy={145}
+              cx={120}
+              cy={120}
               innerRadius={80}
               outerRadius={100}
               label={renderCustomizedLabel}
               fill="#8884d8"
-              paddingAngle={3}
+              paddingAngle={2}
               dataKey="value"
             >
               {data.map((_entry, index) => (
@@ -126,6 +144,10 @@ export const Balance = () => {
             <span className="color-red">
               {formatToCurrency(summaryOfCurrentMonth.spent)}
             </span>
+          </p>
+          <p className={cssBalance.Item}>
+            ahorrado
+            <span className="color-yellow">{formatToCurrency(getSaving)}</span>
           </p>
           <p className={cssBalance.Item}>
             diferencia
