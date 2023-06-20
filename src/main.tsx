@@ -34,11 +34,11 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
  *  Cuando se cambie de ruta hacer un scroll to top ✅
  *  Cuando creas un registro mejorar el feedback ✅
  *  Hacer dinamica la altura de la grafica de categorias ✅
- *  Desplegar ✅
+ *  Desplegar
  *  hacer pruebas del loading cuando hace la redirección al iniciar sesión ✅
- * * Cambiar el despliegue en el back
- * * Redirección al crear un cuenta
- * * Confirmar la cuenta automáticamente
+ *  Cambiar el despliegue en el back ✅
+ *  Redirección al crear un cuenta ✅
+ *  Confirmar la cuenta automáticamente ✅
  * * Borrar los usuarios que no crean al menos 2 registros
- * * Solo dos decimales en la gráfica de análisis
+ *  Solo dos decimales en la gráfica de análisis ✅
  */

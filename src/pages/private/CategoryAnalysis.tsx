@@ -33,13 +33,18 @@ export const CategoryAnalysis = () => {
 
         getKindRecords.forEach((record) => {
           amountByCategory.name = category
-
           if (record.category === category) {
             amountByCategory.cantidad += Number(record.amount)
           }
         })
 
         return amountByCategory
+      })
+      .map((item) => {
+        return {
+          cantidad: +item.cantidad.toFixed(2),
+          name: item.name
+        }
       })
       .sort((a, b) => b.cantidad - a.cantidad)
 

@@ -108,7 +108,9 @@ export const Balance = () => {
         <Div cssx="pie">
           <Text cssx="pie__result">
             {formatToCurrency(
-              summaryOfCurrentMonth.income - summaryOfCurrentMonth.spent
+              summaryOfCurrentMonth.income -
+                summaryOfCurrentMonth.spent -
+                getSaving
             )}
           </Text>
           <PieChart innerRadius={5} width={250} height={250}>
@@ -142,7 +144,7 @@ export const Balance = () => {
           <p className={cssBalance.Item}>
             gastado
             <span className="color-red">
-              {formatToCurrency(summaryOfCurrentMonth.spent)}
+              {formatToCurrency(summaryOfCurrentMonth.spent - getSaving)}
             </span>
           </p>
           <p className={cssBalance.Item}>
@@ -153,7 +155,9 @@ export const Balance = () => {
             diferencia
             <span>
               {formatToCurrency(
-                summaryOfCurrentMonth.income - summaryOfCurrentMonth.spent
+                summaryOfCurrentMonth.income -
+                  summaryOfCurrentMonth.spent -
+                  getSaving
               )}
             </span>
           </p>

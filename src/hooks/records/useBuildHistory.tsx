@@ -18,10 +18,12 @@ export const useBuildHistory = () => {
       ...new Set(monthsWithRecords.map((month) => JSON.stringify(month)))
     ].map((month) => JSON.parse(month))
 
-    const recordsWithMonthName = records.map((record) => ({
-      ...record,
-      date: formatToDate(record.date, 'month')
-    }))
+    const recordsWithMonthName = records
+      .filter((record) => record.category !== 'ahorro')
+      .map((record) => ({
+        ...record,
+        date: formatToDate(record.date, 'month')
+      }))
 
     const summaries = clearRepeatMonths.map(({ month, monthAndYear }) => {
       const summaryMonthlyRecord: MonthlySummary = {
