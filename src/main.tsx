@@ -30,10 +30,15 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
  * * Refactorizar el componente de balance
  *  Cuando un usuario se crea, añadirle las categorías por defecto ✅
  * * Añadir la funcionalidad de crear registros automáticos cada mes
- * * Hacer que el menu forme parte del flujo
- * * Cuando se cambie de ruta hacer un scroll to top
+ *  Hacer que el menu forme parte del flujo ✅
+ *  Cuando se cambie de ruta hacer un scroll to top ✅
  *  Cuando creas un registro mejorar el feedback ✅
  *  Hacer dinamica la altura de la grafica de categorias ✅
- * * Desplegar
+ *  Desplegar ✅
  *  hacer pruebas del loading cuando hace la redirección al iniciar sesión ✅
+ * * Cambiar el despliegue en el back
+ * * Redirección al crear un cuenta
+ * * Confirmar la cuenta automáticamente
+ * * Borrar los usuarios que no crean al menos 2 registros
+ * * Solo dos decimales en la gráfica de análisis
  */

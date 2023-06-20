@@ -1,6 +1,7 @@
 import { axiosClient } from '../../config'
 import { useMainContext } from '../context/useMainContext'
 import { useValidations } from '../global/useValidations'
+import { useNavigate } from 'react-router-dom'
 
 export const useSignIn = () => {
   const {
@@ -11,6 +12,7 @@ export const useSignIn = () => {
     passwordsNotEquals
   } = useValidations()
   const { setFeedbackActive } = useMainContext()
+  const navigate = useNavigate()
 
   async function handleSignIn(
     fields: object,
@@ -34,6 +36,11 @@ export const useSignIn = () => {
       const {
         data: { msg }
       } = await axiosClient.post('/user', dataToSend)
+
+      setTimeout(() => {
+        navigate('/')
+      }, 2000)
+
       setFeedbackActive(msg, false)
       return true
     } catch (error: any) {
