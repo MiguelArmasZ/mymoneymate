@@ -56,7 +56,11 @@ export const Balance = () => {
   useEffect(() => {
     let saving = 0
     savingRecords.forEach((record) => {
-      saving += Number(record.amount)
+      if (
+        formatToDate(record.date, 'month') === formatToDate(new Date(), 'month')
+      ) {
+        saving += Number(record.amount)
+      }
     })
 
     setGetSaving(saving)
